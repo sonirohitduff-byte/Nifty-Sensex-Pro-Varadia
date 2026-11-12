@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>Nifty Sensex Pro</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+background:#101827;
+color:white;
+font-family:Arial,sans-serif;
+padding:18px;
+}
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+h2{margin:0;color:#38bdf8}
+.status{color:#22c55e;font-size:13px}
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+margin-bottom:16px;
+}
+.index{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.price{
+font-size:27px;
+font-weight:bold;
+margin-top:12px;
+}
+.green{color:#22c55e}
+.red{color:#ef4444}
+button{
+border:0;
+border-radius:9px;
+padding:12px 18px;
+background:#2563eb;
+color:white;
+font-weight:bold;
+}
+.controls{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin:15px 0;
+}
+h3{color:#38bdf8}
+table{
+width:100%;
+border-collapse:collapse;
+font-size:13px;
+}
+td,th{
+padding:12px 5px;
+border-bottom:1px solid #334155;
+text-align:left;
+}
+footer{
+text-align:center;
+color:#94a3b8;
+margin-top:30px;
+font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div>
+<h2>📊 NIFTY SENSEX PRO</h2>
+<div class="status">● Dashboard Demo</div>
+</div>
+<button onclick="toggleScanner()" id="scanBtn">
+START
+</button>
+</header>
+
+<div class="card">
+<div class="index">
+<strong>NIFTY 50</strong>
+<span class="green">Market Index</span>
+</div>
+<div class="price">--</div>
+<div>Live data not connected</div>
+</div>
+
+<div class="card">
+<div class="index">
+<strong>SENSEX</strong>
+<span class="green">Market Index</span>
+</div>
+<div class="price">--</div>
+<div>Live data not connected</div>
+</div>
+
+<div class="card">
+<h3>⚙️ Scanner Settings</h3>
+<div class="controls">
+<button>5 Min</button>
+<button>10 Min</button>
+<button>15 Min</button>
+<button>30 Min</button>
+</div>
+<p>Patterns: 16</p>
+<p>Pivot Photo Alerts: Enabled</p>
+<p>Telegram: Backend not connected</p>
+</div>
+
+<div class="card">
+<h3>🔔 Latest Signals</h3>
+<table>
+<tr>
+<th>Index</th>
+<th>Pattern</th>
+<th>Signal</th>
+</tr>
+<tr>
+<td colspan="3">Waiting for live scanner connection...</td>
+</tr>
+</table>
+</div>
+
+<footer>
+Nifty Sensex Pro | Version 1.0
+</footer>
+
+<script>
+let running=false;
+
+function toggleScanner(){
+running=!running;
+document.getElementById("scanBtn").innerText=
+running?"STOP":"START";
+}
+</script>
+
+</body>
+</html>
